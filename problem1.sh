@@ -18,4 +18,9 @@ if [ ! $? -lt 2 ];then
 fi
 
 ## ここから
-echo "$1"
+if [ $(( $1 % 15)) -eq 0 ]; then echo "fizz buzz"
+elif [ $(( $1 % 5)) -eq 0 ]; then echo "buzz"
+elif [ $(( $1 % 3)) -eq 0 ]; then echo "fizz"
+else echo "$1"
+fi
+
